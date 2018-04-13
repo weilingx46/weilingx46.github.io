@@ -1,80 +1,306 @@
 body {
-	background-image: url("bg.jpg");
-	background-position: center top;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: cover;
-
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  color: White;
+  margin: 0;
+  padding: 0;
+  height: 100%
 }
 
-
-
-.title {
-	color: white;
-	text-align: center;
-	font-family: "Source Sans Pro", Helvetica, sans-serif;
-
-	margin-top: 25px;
-    font-size: 21px;
-
-    -webkit-animation: fadein 5s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 5s; /* Firefox < 16 */
-        -ms-animation: fadein 5s; /* Internet Explorer */
-         -o-animation: fadein 5s; /* Opera < 12.1 */
-            animation: fadein 5s;
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #22182C;
 }
 
-
-@keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
-/* Firefox < 16 */
-@-moz-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
-/* Safari, Chrome and Opera > 12.1 */
-@-webkit-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+img {
+  width: 10%;
 }
 
-/* Internet Explorer */
-@-ms-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+.cover {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  background-position: center;
+  background-image: url("assets/bg.jpg");
+  background-size: cover;
+  height: 100%;
+  min-width: 100%;
+  color: White;
 }
 
-/* Opera < 12.1 */
-@-o-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+.nav-bar-container{
+  border: 1px solid White;
+  display: flex;
+  justify-content: space-around;
 }
 
-
-div.slide-up {
-  height:200px;
-  overflow:hidden;
+/*nav bar created with ref to: https://www.w3schools.com/css/css_navbar.asp*/
+.nav-bar-container li {
+  display: inline;
+  width: 25%
 }
 
-div.slide-up p {
-  animation: 10s slide-up;
-  margin-top:0%;
+.nav-bar-container li:hover {
+  transition: 0.4s;
+  background-color: rgba(0,0,0, 0.3);
 }
 
-@keyframes slide-up {
-  from {
-    margin-top: 100%;
-    height: 300%; 
+.nav-bar-container a{
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  color: White;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.dropdown {
+  display: none;
+}
+
+.title-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 8rem 4rem 6rem 4rem;
+}
+
+.title{
+  text-align: center;
+  font-size: 5rem;
+  font-weight: 900;
+  letter-spacing: 0.075em;
+}
+
+.subtitle {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: 0.01em;
+}
+
+.learn {
+  display: inline-block;
+  background-color: White;
+  padding: 1.25em 3.5em;
+  margin: 4px 2px;
+  border: 2px solid White;
+  text-align: center;
+  color: black;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer
+}
+
+.learn:hover{
+  background-color: transparent;
+  color: white;
+  transition: all 0.4s;
+}
+
+/*made with reference to: https://www.w3schools.com/css/css_form.asp*/
+.contact-me {
+  display: flex;
+  padding: 4em 3.5em;
+}
+
+input[type=text] {
+   width: 100%;
+   padding: 12px 20px;
+   margin: 4px 0;
+   box-sizing: border-box;
+   border: 3px solid White;
+   transition: 0.5s;
+   outline: none;
+}
+input[type=text]:focus {
+    border: 3px solid #4d0026;
+}
+
+#contact {
+  background-color: White;
+  border: 2px solid White;
+  padding: 16px 32px;
+  margin: 4px 2px;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+/*made with ref to: https://bootstrapbay.com/blog/css-transitions-buttons/*/
+#contact:hover {
+  background-color: transparent;
+  color: white;
+}
+
+.content-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.content-container ul {
+  font-weight: 300;
+}
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.info-container img:hover {
+  opacity: 0.7;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.info {
+  list-style-type: circle;
+}
+
+.info li{
+  padding-top: 0.5em;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.nav-footer li{
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 0.5rem 0 0.5rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.nav-footer li:hover {
+  opacity: 0.6;
+}
+
+.privacy {
+  display: flex;
+  align-items: center;
+}
+
+.privacy li {
+  display: block;
+  white-space: nowrap;
+  font-weight: 900;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.privacy li:hover{
+  opacity: 0.6;
+}
+
+@media only screen and (max-width: 640px) {
+
+  .contact-me {
+  flex-direction: column
   }
 
-  to {
-    margin-top: 0%;
-    height: 100%;
+  .nav-bar-container {
+    display: none;
+  }
+  .content-container{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Toggle dropdown menu made with reference to:
+  https://www.w3schools.com/howto/howto_js_fullscreen_overlay.asp,
+  http://dabblet.com/gist/1506530,
+  https://css-tricks.com/the-checkbox-hack/*/
+
+  .dropdown{
+      position: fixed;
+      display: inline-block;
+      right: 0;
+      font-size: 2em;
+      padding: 20px;
+      color: White;
+  }
+
+  .fas {
+    cursor: pointer;
+  }
+
+  .dropdown ul{
+      display: none;
+  }
+
+  input[type=checkbox]{
+    display: none;
+  }
+
+  /*checkbox icon swap made with ref to: https://stackoverflow.com/questions/
+  45245301/toggle-font-awesome-class-on-button-click*/
+
+  #checkbox-toggle+label>.fa-bars {
+    display: inline-block;
+  }
+
+  #checkbox-toggle+label>.fa-window-close{
+    display: none;
+  }
+
+  #checkbox-toggle:checked+label>.fa-bars {
+    display: none;
+  }
+
+  #checkbox-toggle:checked+label>.fa-window-close {
+    transition: 0.3s;
+    display: inline-block;
+    right: 0;
+    position: fixed;
+    padding: 0 20px 0 0;
+    z-index: 2;
+  }
+
+/*checkbox dropdown made with ref to: https://tutorialzine.com/2015/08/
+quick-tip-css-only-dropdowns-with-the-checkbox-hack*/
+  input[type=checkbox]:checked ~ ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0,0,0, 0.9);
+      transition: 0.5s;
+  }
+  input[type=checkbox] ~ li {
+    text-align: center;
+    color: White;
+    text-decoration: none;
+  }
+
+  .info {
+    display: None;
+  }
+
+  footer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
-
-

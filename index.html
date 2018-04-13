@@ -1,29 +1,117 @@
-<!DOCTYPE HTML>
+<!-- CS 52: Lab 1 - Landing Page -->
+<!-- Weiling Huang, 4/6/18 -->
 
-<!--
-
-The personal website for Weiling Huang.
-
-weilinghuang.me
-
--->
-
-<link rel="stylesheet" href="style.css">
-
-
+<!DOCTYPE html>
 <html lang="en">
-<head>
- 	<title>Weiling Huang</title>
-	<meta charset="utf-8" />
+  <head>
+    <title>Weiling Huang</title>
 
-</head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="cover">
+      <!-- nav created with ref to: https://www.w3schools.com/css/css_navbar.asp-->
+      <!-- icons from fontawesome.com -->
+      <nav>
+        <ul class="nav-bar-container">
+          <li>
+            <a href="#">
+              <i class="fas fa-home"></i> Home
+            </a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-user"></i> About
+            </a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-file"></i> Resume
+            </a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-paper-plane"></i> Contact
+            </a>
+          </li>
+        </ul>
+        <!-- Drop down created with ref to: https://tutorialzine.com/2015/08/quick-tip-css-only-dropdowns-with-the-checkbox-hack-->
+        <div class="dropdown">
+          <input type="checkbox" id="checkbox-toggle">
+          <label for="checkbox-toggle">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-window-close"></i>
+          </label>
+          <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Resume</a></li>
+              <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="title-container">
+        <h1 class="title">
+          WEILING HUANG
+        </h1>
 
-<body>
-	<div class="title slide">
-		<h1>WEILING HUANG </h1>
-		<p>Dartmouth '19 | Computer Science | Government</p>
-	</div>
-</body>
+        <p class="subtitle">
+          Dartmouth '19 | Computer Science | Government
+        </p>
 
+        <button class="learn">Learn More</button>
 
+        <!-- made with ref to : /*made with reference to: https://www.w3schools.com/css/css_form.asp*/ -->
+        <div class="contact-me">
+            <input type="text" placeholder="Email address"> <input type="submit" value="Contact Me!" id="contact">
+        </div>
+      </div>
+
+      <!-- icons from flaticon.com, created by Vectors Market -->
+      <div class="content-container">
+        <div class="info-container">
+          <img src="assets/resume.png">
+          <h2>Resume</h2>
+          <ul class="info">
+            <li>English PDF</li>
+            <li>Latin PDF</li>
+            <li>Chinese PDF</li>
+          </ul>
+        </div>
+
+        <div class="info-container">
+          <img src="assets/project.png">
+          <h2>Projects</h2>
+          <ul class="info">
+            <li>Nuclear Generator</li>
+            <li>XM-3 Mark IV Cuddle Machine</li>
+            <li>Fountain of Youth</li>
+          </ul>
+        </div>
+
+        <div class="info-container">
+          <img src="assets/blog.png">
+          <h2>Blog</h2>
+          <ul class="info">
+            <li>The Effects of Beef Jerky on Coding Style</li>
+            <li>How to Waterproof Your Computer</li>
+            <li>No-Show Socks vs. Ankle Socks</li>
+          </ul>
+        </div>
+      </div>
+
+      <footer>
+          <ul class="privacy">
+            <li>Status</li>
+            <li>Privacy & Terms</li>
+          </ul>
+          <!-- icons from fontawesome.com -->
+          <ul class="nav-footer">
+            <li><i class="fab fa-linkedin"></i></li>
+            <li><i class="fab fa-github-square"></i></li>
+            <li><i class="fab fa-facebook-square"></i></li>
+            <li><i class="fas fa-envelope-square"></i></li>
+          </ul>
+      </footer>
+    </div>
+  </body>
 </html>
